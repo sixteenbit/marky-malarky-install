@@ -44,7 +44,7 @@ else
   DEST=""
 fi
 
-GITHUBPROJECT="gbz-setup"
+GITHUBPROJECT="marky-malarky-install"
 GITHUBURL="https://github.com/sixteenbit/$GITHUBPROJECT"
 PIHOMEDIR="$DEST/home/pi"
 BINDIR="$PIHOMEDIR/$GITHUBPROJECT"
