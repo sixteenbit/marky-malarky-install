@@ -172,6 +172,10 @@ execute "curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-
 execute "bash retrogame.sh"
 execute "cp $BINDIR/settings/retrogame.cfg $DESTBOOT/retrogame.cfg"
 
+# Install Camble Safe Shutdown
+execute "git clone https://github.com/Camble/Safe-Power-Monitor.git"
+echo "@reboot /usr/bin/nice -n 19 /usr/bin/python ~/Safe-Power-Monitor/safe_power_monitor.py" >> mycron; crontab mycron;rm mycron
+
 # Install i2s script
 execute "curl -sS https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/i2samp.sh | bash"
 

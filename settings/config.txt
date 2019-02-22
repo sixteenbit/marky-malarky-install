@@ -37,3 +37,6 @@ sdram_over_voltage=2
 
 # Rotate display
 display_rotate=2
+
+# Camble Safe Shutdown
+dtoverlay=gpio-poweroff:gpiopin=22,active_low="y"
